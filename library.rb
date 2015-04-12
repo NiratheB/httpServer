@@ -83,7 +83,12 @@ def writeLog(log)
     input << log[field].gsub('+',' ')
   end
 
-  logFile.printf($printFormat, *input)
+  mutex = Mutex.new
+
+  mutex.synchronize do
+    logFile.printf($printFormat, *input)
+  end
+
   logFile.close
 
 end
