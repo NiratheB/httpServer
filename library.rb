@@ -96,7 +96,7 @@ end
 def initPrintFormat(numberOfFields = $numberOfFields)
   $printFormat=""
   numberOfFields.times do
-    $printFormat += "%10s"
+    $printFormat += "%30s"
   end
   $printFormat+="\n"
 

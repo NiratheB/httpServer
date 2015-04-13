@@ -3,7 +3,7 @@ require_relative 'library'
 require_relative 'thread_pool'
 
 
-localhost = 'localhost'
+localhost = '192.168.2.40'
 port = 3000
 
 server = TCPServer.new(localhost, port)
